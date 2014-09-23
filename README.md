@@ -22,23 +22,26 @@ How to Use
 * `swipeRightLayout` - **Required** - right view layout id.
 * `swipeRightViewWidth` - Optional - right view width Default: '120'
 
+MultiChoiceModeListener()
+
 ```
 
-			@Override
-			public boolean onCreateActionMode(ActionMode mode, Menu menu) {
-				if (mListView.onCreateActionMode()) {
-					Log.e("MultiChoiceModeListener", "onCreateActionMode--before");
-					return true;
-				} else {
-					Log.e("MultiChoiceModeListener", "onCreateActionMode--after");
-					return false;
-				}
-			}
+	@Override
+	public boolean onCreateActionMode(ActionMode mode, Menu menu) {
+		if (mListView.onCreateActionMode()) {
+			Log.e("MultiChoiceModeListener", "onCreateActionMode--before");
+			return true;
+		} else {
+			Log.e("MultiChoiceModeListener", "onCreateActionMode--after");
+			return false;
+		}
+	}
 
-			@Override
-			public void onDestroyActionMode(ActionMode mode) {
-				Log.e("MultiChoiceModeListener", "onDestroyActionMode");
-				mListView.onDestroyActionMode();
-			}
+	@Override
+	public void onDestroyActionMode(ActionMode mode) {
+		Log.e("MultiChoiceModeListener", "onDestroyActionMode");
+		mListView.onDestroyActionMode();
+	}
 ```
+
 See details in testDemo.
